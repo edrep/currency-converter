@@ -1,0 +1,40 @@
+# Composer dependencies
+/vendor/
+
+# Composer itself
+composer.lock
+
+# PHPUnit and test results
+.phpunit.result.cache
+/phpunit.xml
+/phpunit.xml.dist
+/test-results/
+
+# PHPCS and code sniffer reports
+/.phpcs.cache
+phpcs.xml.cache
+
+# Code coverage results
+/coverage/
+
+# User-specific files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE and editor files
+.idea/
+*.iml
+.vscode/
+/nbproject/
+
+# Other common ignores
+.env

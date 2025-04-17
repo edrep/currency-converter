@@ -1,0 +1,36 @@
+{
+  "name": "edrep/currency-converter",
+  "description": "A PHP package for currency conversion using various providers.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Edrep Suiram",
+      "email": "edrepsuiram@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Edrep\\CurrencyConverter\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Edrep\\CurrencyConverter\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "ext-simplexml": "*",
+    "ext-dom": "*",
+    "guzzlehttp/guzzle": "^7.9",
+    "ext-redis": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "squizlabs/php_codesniffer": "^3.12"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
