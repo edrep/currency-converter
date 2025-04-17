@@ -3,10 +3,10 @@
 namespace Edrep\CurrencyConverter\Providers;
 
 use DateTime;
+use Edrep\CurrencyConverter\CacheEngines\CacheEngineAbstract;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
-use Edrep\CurrencyConverter\CacheEngines\CacheEngineInterface;
 use Edrep\CurrencyConverter\CacheEngines\MemoryCache;
 use Edrep\CurrencyConverter\Exceptions\ConfigurationException;
 use Edrep\CurrencyConverter\Exceptions\InvalidRatesException;
@@ -23,10 +23,10 @@ class FixerProvider extends ForexProviderAbstract
     /**
      * Fixer constructor.
      * @param string $apiKey
-     * @param CacheEngineInterface|null $cacheEngine Defaults to MemoryCache
+     * @param CacheEngineAbstract|null $cacheEngine Defaults to MemoryCache
      * @throws ConfigurationException
      */
-    public function __construct(string $apiKey, CacheEngineInterface $cacheEngine = null)
+    public function __construct(string $apiKey, ?CacheEngineAbstract $cacheEngine = null)
     {
         $this->apiKey = $apiKey;
 

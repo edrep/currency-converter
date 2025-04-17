@@ -38,7 +38,7 @@ class BnrProvider extends ForexProviderAbstract
      * @param CacheEngineInterface|null $cacheEngine Defaults to MemoryCache
      * @throws ConfigurationException
      */
-    public function __construct(CacheEngineInterface $cacheEngine = null)
+    public function __construct(?CacheEngineInterface $cacheEngine = null)
     {
         if ($cacheEngine === null) {
             $cacheEngine = new MemoryCache();
